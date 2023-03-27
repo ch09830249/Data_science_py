@@ -1,3 +1,4 @@
+# Ch 4
 # Web scraping
 import requests
 r = requests.get("https://www.google.com.tw/?hl=zh_TW")
@@ -43,3 +44,26 @@ r = requests.get("https://httpbin.org/user-agent")
 
 r = requests.get("https://www.flag.com.tw/")
 print(r.raise_for_status())
+
+r = requests.get("https://www.google.com.tw/?hl=zh_TW")
+print(r.headers['Content-Type'])
+# print(r.headers['Content-Length'])
+print(r.headers['Date'])
+print(r.headers['Server'])
+
+# r = requests.get("https://www.flag.com.tw/")
+# fp = open("C:/Users/user/Desktop/Data_science_py/flag.txt", "w", encoding="utf8")
+# fp.write(r.text)
+# fp.close()
+
+# fp = open("C:/Users/user/Desktop/Data_science_py/flag.txt", "r", encoding="utf8")
+# str = fp.read()
+# print("File content 1:")
+# print(str)
+# fp.close()
+
+# with open("C:/Users/user/Desktop/Data_science_py/flag.txt", "r", encoding="utf8") as fp:
+#     str = fp.read()
+#     print("File content 2:")
+#     print(str)
+#     fp.close()
